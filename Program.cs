@@ -12,8 +12,35 @@ class Program
         Console.Write("Seleccione una opción: ");
 
         int opcion = int.Parse(Console.ReadLine());
-        // TODO: Implementar la lógica de menú
+
+        switch (opcion)
+        {
+            case 4: //Mario Ramírez beibeee
+                Console.Write("Ingrese el primer número: ");
+                double num1 = double.Parse(Console.ReadLine());
+
+                Console.Write("Ingrese el segundo número: ");
+                double num2 = double.Parse(Console.ReadLine());
+
+                double resultado = Division(num1, num2);
+
+                Console.WriteLine("El resultado es: " + resultado);
+                break;
+
+            default:
+                Console.WriteLine("Opción no válida.");
+                break;
+        }
     }
 
-    // TODO: Implementar funciones de suma, resta, multiplicación, división
+    static double Division(double a, double b)
+    {
+        if (b == 0)
+        {
+            Console.WriteLine("Error: No se puede dividir entre cero.");
+            return 0;
+        }
+
+        return a / b;
+    }
 }
