@@ -15,10 +15,47 @@ class Program
 
         switch (opcion)
         {
-            
+            case 1:
+            Suma();
+            break;
+
+            case 2:
+            Resta();
+            break;
+
             case 3:
-                Multiplicar();
-                break;
+            Multiplicar();
+            break;
+
+            case 4:
+            Dividir();
+            break;
+    }
+   
+    static void Suma()
+    {
+        Console.Write("Ingrese el primer número: ");
+        double num1 = double.Parse(Console.ReadLine());
+
+        Console.Write("Ingrese el segundo número: ");
+        double num2 = double.Parse(Console.ReadLine());
+
+        double resultado = num1 + num2;
+
+        Console.WriteLine($"El resultado de la suma es: {resultado}");
+    }
+
+    static void Resta()
+    {
+        Console.Write("Ingrese el primer número: ");
+        double num1 = double.Parse(Console.ReadLine());
+
+        Console.Write("Ingrese el segundo número: ");
+        double num2 = double.Parse(Console.ReadLine());
+
+        double resultado = num1 - num2;
+
+        Console.WriteLine($"El resultado de la resta es: {resultado}");
     }
 
     static void Multiplicar()
@@ -32,6 +69,25 @@ class Program
         double resultado = num1 * num2;
 
         Console.WriteLine($"El resultado de la multiplicación es: {resultado}");
+    }
+
+        static void Dividir()
+    {
+        Console.Write("Ingrese el primer número: ");
+        double num1 = double.Parse(Console.ReadLine());
+
+        Console.Write("Ingrese el segundo número: ");
+        double num2 = double.Parse(Console.ReadLine());
+
+        if (num2 != 0)
+        {
+            double resultado = num1 / num2;
+            Console.WriteLine($"El resultado de la división es: {resultado}");
+        }
+        else
+        {
+            Console.WriteLine("Error: No se puede dividir entre cero.");
+        }
     }
 
     // TODO: Implementar funciones de suma, resta y división
