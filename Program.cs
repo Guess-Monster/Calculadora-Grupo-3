@@ -28,7 +28,15 @@ class Program
             break;
 
             case 4:
-            Dividir();
+                Console.Write("Ingrese el primer número: ");
+                double num1 = double.Parse(Console.ReadLine());
+
+                Console.Write("Ingrese el segundo número: ");
+                double num2 = double.Parse(Console.ReadLine());
+
+                double resultado = Division(num1, num2);
+
+                Console.WriteLine("El resultado es: " + resultado);
             break;
     }
    
@@ -71,24 +79,17 @@ class Program
         Console.WriteLine($"El resultado de la multiplicación es: {resultado}");
     }
 
-        static void Dividir()
-    {
-        Console.Write("Ingrese el primer número: ");
-        double num1 = double.Parse(Console.ReadLine());
-
-        Console.Write("Ingrese el segundo número: ");
-        double num2 = double.Parse(Console.ReadLine());
-
-        if (num2 != 0)
+        static double Division(double a, double b)
         {
-            double resultado = num1 / num2;
-            Console.WriteLine($"El resultado de la división es: {resultado}");
-        }
-        else
+        if (b == 0)
         {
             Console.WriteLine("Error: No se puede dividir entre cero.");
+            return 0;
         }
-    }
 
+        return a / b;
+    }
+    
     // TODO: Implementar funciones de suma, resta y división
 }}
+
