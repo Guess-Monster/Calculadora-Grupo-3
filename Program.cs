@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 class Program
 {
@@ -15,7 +15,19 @@ class Program
 
         switch (opcion)
         {
-            case 4: //Mario Ramírez beibeee
+            case 1:
+            Suma();
+            break;
+
+            case 2:
+            Resta();
+            break;
+
+            case 3:
+            Multiplicar();
+            break;
+
+            case 4:
                 Console.Write("Ingrese el primer número: ");
                 double num1 = double.Parse(Console.ReadLine());
 
@@ -25,16 +37,50 @@ class Program
                 double resultado = Division(num1, num2);
 
                 Console.WriteLine("El resultado es: " + resultado);
-                break;
+            break;
+    }
+   
+    static void Suma()
+    {
+        Console.Write("Ingrese el primer número: ");
+        double num1 = double.Parse(Console.ReadLine());
 
-            default:
-                Console.WriteLine("Opción no válida.");
-                break;
-        }
+        Console.Write("Ingrese el segundo número: ");
+        double num2 = double.Parse(Console.ReadLine());
+
+        double resultado = num1 + num2;
+
+        Console.WriteLine($"El resultado de la suma es: {resultado}");
     }
 
-    static double Division(double a, double b)
+    static void Resta()
     {
+        Console.Write("Ingrese el primer número: ");
+        double num1 = double.Parse(Console.ReadLine());
+
+        Console.Write("Ingrese el segundo número: ");
+        double num2 = double.Parse(Console.ReadLine());
+
+        double resultado = num1 - num2;
+
+        Console.WriteLine($"El resultado de la resta es: {resultado}");
+    }
+
+    static void Multiplicar()
+    {
+        Console.Write("Ingrese el primer número: ");
+        double num1 = double.Parse(Console.ReadLine());
+
+        Console.Write("Ingrese el segundo número: ");
+        double num2 = double.Parse(Console.ReadLine());
+
+        double resultado = num1 * num2;
+
+        Console.WriteLine($"El resultado de la multiplicación es: {resultado}");
+    }
+
+        static double Division(double a, double b)
+        {
         if (b == 0)
         {
             Console.WriteLine("Error: No se puede dividir entre cero.");
@@ -43,4 +89,7 @@ class Program
 
         return a / b;
     }
-}
+    
+    // TODO: Implementar funciones de suma, resta y división
+}}
+
